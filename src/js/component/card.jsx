@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 
 
-function Card(props){
+function Card(){
     
   const [counterSeconds1, setCounter1] = useState(0);
   const [counterSeconds2, setCounter2] = useState(0);
@@ -18,7 +18,7 @@ function Card(props){
          
         setCounter1((prevCount) => prevCount + 1 );
  
-      },-1000000)
+      },200)
       return () => clearInterval(miTimeout)
     },[]) 
         
@@ -77,7 +77,7 @@ function Card(props){
      return
    }
  
-   if(counterSeconds1 === 9){
+   if(counterSeconds1 === 10){
      setCounter1(0)
      setCounter2((prevCount) => prevCount +1 )
      return
